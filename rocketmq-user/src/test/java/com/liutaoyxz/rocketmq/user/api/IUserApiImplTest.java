@@ -22,6 +22,7 @@ public class IUserApiImplTest {
     @Test
     public void queryUserById() throws Exception {
         System.out.println(iUserApi.queryUserById(1));
+        Thread.sleep(10000000L);
     }
 
 }

@@ -20,6 +20,12 @@ public class IUserApiImpl implements IUserApi {
     private UserService userService;
 
     public Result<UserQueryRes> queryUserById(Integer id) {
-        return userService.queryUserById(id);
+        UserQueryRes res = new UserQueryRes();
+        res.setUserName("liutao");
+        Result<UserQueryRes> result = new Result<>();
+        result.success();
+        result.setData(res);
+        return result;
+//        return userService.queryUserById(id);
     }
 }
