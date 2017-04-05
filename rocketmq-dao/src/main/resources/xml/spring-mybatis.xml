@@ -29,7 +29,7 @@
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" >
-        <property name="basePackage" value="com.liutaoyxz.rocketmq.mapper"/>
+        <property name="basePackage" value="com.liutaoyxz.rocketmq.dao.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sessionFactory"/>
     </bean>
 
