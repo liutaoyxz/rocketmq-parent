@@ -1,5 +1,7 @@
 package com.liutaoyxz.rocketmq.common.protocol;
 
+import com.liutaoyxz.rocketmq.common.constants.MQEumes;
+
 /**
  * @author liutao
  * @description :
@@ -14,12 +16,18 @@ public class Result<T> {
 
     private T data;
 
+    public void success(){
+        this.code = MQEumes.CommonEnum.SUCCESS.getCode();
+        this.desc = MQEumes.CommonEnum.SUCCESS.getDesc();
+    }
+
     public T getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public Result setData(T data) {
         this.data = data;
+        return this;
     }
 
     public String getCode() {
