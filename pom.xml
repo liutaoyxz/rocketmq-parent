@@ -27,6 +27,7 @@
         <dubbo.version>2.5.3</dubbo.version>
         <mybatis.version>3.4.2</mybatis.version>
         <druid.version>1.0.29</druid.version>
+        <zookeeper.version>3.4.6</zookeeper.version>
     </properties>
 
     <dependencies>
@@ -129,6 +130,20 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>${zookeeper.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>0.1</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
