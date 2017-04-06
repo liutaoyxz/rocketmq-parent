@@ -3,7 +3,7 @@
 See here for more details: http://gordondickens.com/wordpress/2013/03/27/sawing-through-the-java-loggers/ -->
 <configuration scan="true" scanPeriod="30 seconds" debug="false" >
 	<contextName>logback</contextName>
-	<property name="logback.level" value="debug" />
+	<property name="logback.level" value="info" />
 	<property name="logback.pattern" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p - %m%n" />
 
 	<!-- %d [%t] %-5p %c.%M[%L] - %m%n -->
