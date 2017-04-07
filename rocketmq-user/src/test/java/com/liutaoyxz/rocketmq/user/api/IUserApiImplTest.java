@@ -7,8 +7,6 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import static org.junit.Assert.*;
-
 /**
  * Created by ltlxy on 2017/4/5.
  */
@@ -21,6 +19,7 @@ public class IUserApiImplTest {
 
     @Test
     public void queryUserById() throws Exception {
+
         System.out.println(iUserApi.queryUserById(1));
 //        Thread.sleep(10000000L);
     }
