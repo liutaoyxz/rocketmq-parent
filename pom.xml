@@ -193,7 +193,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <configuration>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
-                    <stopPort>8017</stopPort>
+                    <stopPort>8018</stopPort>
                     <stopKey>bar</stopKey>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
@@ -202,7 +202,7 @@
                         </connector>
                     </connectors>
                     <webAppConfig>
-                        <contextPath>/</contextPath>
+                        <contextPath>/rocketmq-web</contextPath>
                     </webAppConfig>
                 </configuration>
             </plugin>
