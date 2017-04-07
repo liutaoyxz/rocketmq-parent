@@ -7,8 +7,7 @@
 
 
     <bean class="com.liutaoyxz.rocketmq.common.mq.LTConsumer" id="consumer1" init-method="init">
-        <!--<property name="nameServerAddr" value="192.168.238.148:9876;192.168.238.146:9876"/>-->
-        <property name="nameServerAddr" value="192.168.162.128:9876"/>
+        <property name="nameServerAddr" value="${mq.nameserver.addr}"/>
         <property name="topic" value="testTopic"/>
         <property name="groupName" value="testGroup"/>
         <property name="processor" ref="testProcesser"/>
