@@ -10,7 +10,6 @@
 
     <import resource="classpath:xml/spring-mybatis.xml"/>
 
-    <context:property-placeholder file-encoding="utf-8" location="classpath:conf/user.properties"/>
 
     <dubbo:application name="rocketmq-user"/>
 
