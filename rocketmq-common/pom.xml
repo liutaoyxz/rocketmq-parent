@@ -29,7 +29,40 @@
             <groupId>com.alibaba</groupId>
             <artifactId>dubbo</artifactId>
         </dependency>
-
-
     </dependencies>
+
+    <profiles>
+        <profile>
+            <id>com</id>
+            <build>
+                <filters>
+                    <filter>${project.basedir}/src/main/resources/conf/common-com.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <id>home</id>
+            <build>
+                <filters>
+                    <filter>${project.basedir}/src/main/resources/conf/common-home.properties</filter>
+                </filters>
+            </build>
+        </profile>
+    </profiles>
+
+
+    <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+
+
 </project>

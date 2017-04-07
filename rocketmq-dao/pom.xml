@@ -14,6 +14,7 @@
 
     <dependencies>
 
+
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
@@ -43,8 +44,41 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
-
-
     </dependencies>
+
+
+    <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>com</id>
+            <build>
+                <filters>
+                    <filter>${project.basedir}/src/main/resources/conf/dao-db-com.properties</filter>
+                </filters>
+            </build>
+        </profile>
+        <profile>
+            <id>home</id>
+            <build>
+                <filters>
+                    <filter>${project.basedir}/src/main/resources/conf/dao-db-home.properties</filter>
+                </filters>
+            </build>
+        </profile>
+
+    </profiles>
+
+
 
 </project>

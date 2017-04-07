@@ -10,9 +10,10 @@
 
     <import resource="classpath:xml/spring-mybatis.xml"/>
 
+
     <dubbo:application name="rocketmq-user"/>
 
-    <dubbo:registry address="multicast://224.5.6.7:1234"/>
+    <dubbo:registry address="${user.zookeeper.addr}"/>
 
     <context:component-scan base-package="com.liutaoyxz.rocketmq.user">
         <context:exclude-filter type="annotation" expression="com.alibaba.dubbo.config.annotation.Service"/>
