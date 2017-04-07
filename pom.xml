@@ -170,23 +170,6 @@
     </dependencyManagement>
 
 
-
-
-    <profiles>
-        <profile>
-            <id>dev</id>
-            <properties>
-
-            </properties>
-
-
-
-        </profile>
-
-    </profiles>
-
-
-
     <build>
         <plugins>
             <plugin>
@@ -210,7 +193,7 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <configuration>
                     <scanIntervalSeconds>1</scanIntervalSeconds>
-                    <stopPort>8080</stopPort>
+                    <stopPort>8017</stopPort>
                     <stopKey>bar</stopKey>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
