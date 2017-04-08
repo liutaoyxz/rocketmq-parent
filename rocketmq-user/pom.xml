@@ -91,6 +91,7 @@
 
                     <classesDirectory>target/classes/</classesDirectory>
                     <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
                         <manifest>
                             <mainClass>com.alibaba.dubbo.container.Main</mainClass>
                             <!-- 打包时 MANIFEST.MF文件不记录的时间戳版本 -->

@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
  * Created by ltlxy on 2017/4/5.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:xml/spring-user.xml")
+@ContextConfiguration(locations = "classpath:META-INF/spring/spring-user.xml")
 public class UserServiceImplTest {
 
     @Autowired

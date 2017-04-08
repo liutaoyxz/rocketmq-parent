@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * Created by ltlxy on 2017/4/5.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:xml/spring-user.xml")
+@ContextConfiguration(locations = "classpath:META-INF/spring/spring-user.xml")
 public class IUserApiImplTest {
 
     @Reference(version = "1.0.0")
