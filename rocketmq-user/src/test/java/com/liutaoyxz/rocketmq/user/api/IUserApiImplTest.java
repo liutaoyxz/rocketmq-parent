@@ -7,6 +7,10 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * Created by ltlxy on 2017/4/5.
  */
@@ -19,7 +23,19 @@ public class IUserApiImplTest {
 
     @Test
     public void queryUserById() throws Exception {
-        System.out.println(iUserApi.queryUserById(1));
+        ExecutorService executorService = Executors.newCachedThreadPool();
+        CountDownLatch latch = new CountDownLatch(99);
+        for (int i = 0; i < 100; i++) {
+            executorService.submit(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(iUserApi.queryUserById(1));
+                    latch.countDown();
+                }
+            });
+
+        }
+        latch.await();
 //        Thread.sleep(10000000L);
     }
 
