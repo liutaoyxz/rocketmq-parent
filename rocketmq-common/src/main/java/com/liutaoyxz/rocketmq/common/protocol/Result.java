@@ -2,13 +2,16 @@ package com.liutaoyxz.rocketmq.common.protocol;
 
 import com.liutaoyxz.rocketmq.common.constants.MQEumes;
 
+import java.io.Serializable;
+
 /**
  * @author liutao
  * @description :
  * @create 2017-04-05 15:42
  */
-public class Result<T> {
+public class Result<T> implements Serializable{
 
+    private static final long serialVersionUID = -4101228212208299811L;
     //状态码
     private String code;
     //状态描述

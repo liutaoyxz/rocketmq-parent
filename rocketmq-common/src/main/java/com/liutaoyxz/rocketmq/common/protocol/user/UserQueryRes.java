@@ -1,5 +1,6 @@
 package com.liutaoyxz.rocketmq.common.protocol.user;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -8,8 +9,9 @@ import java.util.Date;
  * @description :  用户查询返回数据
  * @create 2017-04-05 15:44
  */
-public class UserQueryRes {
+public class UserQueryRes implements Serializable{
 
+    private static final long serialVersionUID = -3293541086753529457L;
     private Integer userId;
 
     private String userName;
