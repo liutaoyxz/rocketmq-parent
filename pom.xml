@@ -197,7 +197,7 @@
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <configuration>
-                    <scanIntervalSeconds>1</scanIntervalSeconds>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
                     <stopPort>8018</stopPort>
                     <stopKey>bar</stopKey>
                     <connectors>
