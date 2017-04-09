@@ -80,6 +80,14 @@
                 </includes>
                 <filtering>true</filtering>
             </resource>
+            <resource>
+                <targetPath>${project.build.outputDirectory}/META-INF/spring</targetPath>
+                <directory>${project.basedir}/src/main/resources/spring</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>spring-user.xml</include>
+                </includes>
+            </resource>
 
         </resources>
 

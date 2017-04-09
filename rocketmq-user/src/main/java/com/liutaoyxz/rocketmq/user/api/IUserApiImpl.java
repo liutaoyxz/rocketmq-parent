@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @description :
  * @create 2017-04-05 15:47
  */
-@Service(version = "1.0.0")
+//@Service(version = "1.0.0")
 public class IUserApiImpl implements IUserApi {
 
 

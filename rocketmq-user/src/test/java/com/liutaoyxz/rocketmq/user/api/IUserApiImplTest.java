@@ -15,7 +15,7 @@ import java.util.concurrent.Executors;
  * Created by ltlxy on 2017/4/5.
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:META-INF/spring/spring-user.xml")
+@ContextConfiguration(locations = "classpath:spring/spring-user.xml")
 public class IUserApiImplTest {
 
     @Reference(version = "1.0.0")
@@ -24,7 +24,7 @@ public class IUserApiImplTest {
     @Test
     public void queryUserById() throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
-        CountDownLatch latch = new CountDownLatch(99);
+        CountDownLatch latch = new CountDownLatch(100);
         for (int i = 0; i < 100; i++) {
             executorService.submit(new Runnable() {
                 @Override
